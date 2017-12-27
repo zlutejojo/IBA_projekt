@@ -7,8 +7,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>helloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
-
-
+  
   <!--<build>-->
     <!--<plugins>-->
       <!--<plugin>-->
@@ -46,6 +45,13 @@
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
       <version>5.0.2.RELEASE</version>
+    </dependency>
+
+    <!-- práce s objekty, idea: potřeba nainstalovat plugin + povolit Annotation Processors -->
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>1.16.18</version>
     </dependency>
     
   </dependencies>
