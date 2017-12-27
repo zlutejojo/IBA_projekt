@@ -10,17 +10,30 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *  výchozí webová stránka
+ *  do parametru x, lze nastavit číslo určující, kolikrát se vypíše uvítací text
  */
 
 @WebServlet("/")
 public class ServletIBA extends HttpServlet {
-
-
+    
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html; charset=utf-8");
         PrintWriter out = response.getWriter();
         out.println("<html><body>");
-        out.println("Hello IBA!");
+
+        Integer x = 1;
+        String xReq = request.getParameter("x");
+
+        try {
+            if (xReq != null) x = Integer.parseInt(xReq);
+        } catch (NumberFormatException ex) {
+            x = 1;
+        }
+
+        for (int i = 0; i < x; i++) {
+            out.println("Hello IBA!"+ "<br/>");
+        }
+        
         out.println("</body></html>");
     }
 }
