@@ -1,6 +1,7 @@
 package cz.IBA.servlet.entity;
 
 import java.util.Date;
+import java.util.UUID;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
@@ -18,7 +19,6 @@ import lombok.Data;
 
 @Data  //POJO objekt
 public class Student {
-
 
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
     private String name;

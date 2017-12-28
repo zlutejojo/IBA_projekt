@@ -7,6 +7,20 @@
   <version>1.0-SNAPSHOT</version>
   <name>helloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <!-- použití javy 8 -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   
   <dependencies>
     
@@ -16,7 +30,7 @@
       <version>2.5</version>
     </dependency>
 
-    <!-- pouziti knihovny jstl v jsp -->
+    <!-- použití knihovny jstl v jsp -->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
@@ -45,7 +59,7 @@
     </dependency>
     
   </dependencies>
-  <build>
-    <finalName>helloWeb</finalName>
-  </build>
+  <!--<build>-->
+    <!--<finalName>helloWeb</finalName>-->
+  <!--</build>-->
 </project>
