@@ -9,8 +9,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 
 /**
- * nastavení kódování pro diakritiku (použito v zobrazení výstupu formuláře v studentResult.jsp)
+ * nastavení kódování pro diakritiku (potřebné pro zobrazení výstupu formuláře v studentResult.jsp)
+ * viz web.xml
  * zdroj: https://stackoverflow.com/questions/33941751/html-form-does-not-send-utf-8-format-inputs/
+ *
+ * @author Jana Čižiková
  */
 
 public class EncodingFilter implements Filter {
@@ -36,9 +39,7 @@ public class EncodingFilter implements Filter {
         }
     }
 
-
     public void destroy() {
         // TODO Auto-generated method stub
-
     }
 }

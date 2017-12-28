@@ -4,8 +4,17 @@
 
 <%@taglib prefix="jstl"
           uri="http://java.sun.com/jsp/jstl/core"
-%><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<%--<jsp:useBean id="completedForm"--%>
+            <%--type="cz.IBA.servlet.entity.Student"--%>
+            <%--scope="request"/>--%>
+
+<%--<jsp:useBean id="error"--%>
+            <%--type="java.lang.String"--%>
+            <%--scope="request"/>--%>
 
 <head>
     <meta charset="UTF-8">
@@ -15,13 +24,26 @@
     <form method="post">
         <div>
             <div>Vyplňte formulář</div>
-            <div>Jméno:<input name="name" placeholder="Jana"></div>
-            <div>Příjmení:<input name="surname" placeholder="Nováková"></div>
-            <div>Datum narození:<input name="birthday" placeholder="1. 10. 1999"></div>
+
+            ${error}
+
+            <div>
+                Jméno:<input name="name" placeholder="Jana" value="${completedForm.name}">
+                <spring:errors path="completedForm.name"></spring:errors>
+            </div>
+            <div>
+                Příjmení:<input name="surname" placeholder="Nováková" value="${completedForm.surname}">
+                <spring:errors path="completedForm.name"></spring:errors>
+            </div>
+            
+            <div>
+                Datum narození:<input name="birthday" placeholder="01.02.1999" value="${formatedDate}">
+                <spring:errors path="completedForm.birthday"></spring:errors>
+            </div>
             <div>Pohlaví:
-                <select name="sex">
-                    <option>female</option>
-                    <option>male</option>
+                <select name="sex" value="${completedForm.sex}">
+                    <option value="FEMALE">female</option>
+                    <option value="MALE">male</option>
                 </select>
             </div>
         </div>
