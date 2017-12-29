@@ -37,7 +37,7 @@
       <version>1.2</version>
     </dependency>
 
-    <!-- MVC  -->
+    <!-- vzor MVC  -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -57,8 +57,41 @@
       <artifactId>hibernate-validator</artifactId>
       <version>6.0.6.Final</version>
     </dependency>
+
+    <!-- databáze Derby -->
+    <!--<dependency>-->
+      <!--<groupId>org.apache.derby</groupId>-->
+      <!--<artifactId>derby</artifactId>-->
+      <!--<version>10.14.1.0</version>-->
+    <!--</dependency>-->
+
+    <!-- databáze HSQL -->
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>2.3.5</version>
+    </dependency>
+
+    <!-- připojení k DB (Data Source) -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>2.7.4</version>
+    </dependency>
+
+    <!-- práce s DB spring -->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.3.11.RELEASE</version>
+    </dependency>
     
   </dependencies>
+
+
+  
+
   <!--<build>-->
     <!--<finalName>helloWeb</finalName>-->
   <!--</build>-->

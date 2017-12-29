@@ -6,6 +6,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -18,6 +19,7 @@ import lombok.Data;
  */
 
 @Data  //POJO objekt
+@Builder
 public class Student {
 
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
@@ -33,4 +35,6 @@ public class Student {
     private Date birthday;
 
     private Sex sex;
+
+    private int id;
 }
