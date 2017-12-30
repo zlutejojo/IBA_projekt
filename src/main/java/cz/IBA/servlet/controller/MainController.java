@@ -1,5 +1,6 @@
 package cz.IBA.servlet.controller;
 
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.validation.Valid;
@@ -92,6 +93,9 @@ public class MainController {
             //        přidání studenta do seznamu
 //        todo ošetřit, aby se mi při resendu neuložil záznam 2x
             studentService.create(completedForm);
+            System.out.println("completedForm" + completedForm.getName());
+            List<Student> studentList = studentService.readAll();
+            System.out.println("studentLst " + studentList.get(0).getName());
 
         } else {       //studentEdit
             studentService.update(index,completedForm);
@@ -157,5 +161,7 @@ public class MainController {
 
         return modelAndViewStudentEdit;
     }
+
+
     
 }

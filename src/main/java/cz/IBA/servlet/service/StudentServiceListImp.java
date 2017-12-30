@@ -15,7 +15,7 @@ public class StudentServiceListImp implements StudentService {
     /**
      * seznam všech studentů přidaných na webu /student
      */
-    private List<Student> studentList = new ArrayList<>();
+    public static List<Student> studentList = new ArrayList<>();
 
 
     @Override
@@ -55,8 +55,8 @@ public class StudentServiceListImp implements StudentService {
     /**
      * formátuje tvar Date (př. Tue Oct 10 00:00:00 CEST 2017) na tvar vyžadovaný formulářem (př. 10.10.2017)
      */
-    public String formatDate(Date birthday){
-        Format formatter = new SimpleDateFormat("dd/MM/yyyy");
+    public static String formatDate(Date birthday){
+        Format formatter = new SimpleDateFormat("MM/dd/yyyy");
         String formattedBirthday = null;
         try {
             formattedBirthday = formatter.format(birthday);

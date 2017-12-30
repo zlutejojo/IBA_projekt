@@ -11,9 +11,11 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
+import cz.IBA.servlet.service.StudentServiceListImp;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.ToString;
 
 /**
  * data formuláře (POJO objekt)
@@ -39,7 +41,7 @@ public class Student {
 
     @NotNull(message = "Musíte vyplnit pole.")
 //    todo: napsat vlastní message
-    @DateTimeFormat(pattern = "dd/MM/yyyy")
+    @DateTimeFormat(pattern = "MM/dd/yyyy")
     @Past(message = "Nemůžete se narodit v budoucnosti.")
     private Date birthday;
 
@@ -48,5 +50,14 @@ public class Student {
     @Id
     @GeneratedValue
     private int id;
+
+
+    public String toString() {
+
+        String date = StudentServiceListImp.formatDate(birthday);
+
+        return name + " " + surname + " " + date + " " + sex;
+    }
+
 
 }

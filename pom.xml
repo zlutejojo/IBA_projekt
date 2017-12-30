@@ -88,6 +88,26 @@
       <artifactId>hibernate-core</artifactId>
       <version>5.2.12.Final</version>
     </dependency>
+
+    <!-- rest -->
+
+    <!--<dependency>-->
+      <!--<groupId>com.sun.jersey</groupId>-->
+      <!--<artifactId>jersey-core</artifactId>-->
+      <!--<version>1.19.4</version>-->
+    <!--</dependency>-->
+
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>1.19.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-servlet</artifactId>
+      <version>1.19.4</version>
+    </dependency>
     
   </dependencies>
 

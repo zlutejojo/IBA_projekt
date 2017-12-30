@@ -56,7 +56,7 @@
             </div>
             
             <div>
-                Datum narození:<input name="birthday" placeholder="01.02.1999" id="datepicker" value="${formattedDate}">
+                Datum narození:<input name="birthday" placeholder="10/22/1999" id="datepicker" value="${formattedDate}">
                 <spring:errors path="completedForm.birthday"></spring:errors>
             </div>
             <div>Pohlaví:
