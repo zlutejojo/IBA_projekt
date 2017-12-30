@@ -22,7 +22,9 @@
         </property>
     </bean>
 
-    <!--<mvc:resources mapping="/resources/**" location="/resources/" />-->
+    <!--abych mohla používat zdroje z webapp/resources-->
+
+    <mvc:resources mapping="/resources/**" location="/resources/" />
 
     <mvc:annotation-driven />
 

@@ -39,7 +39,7 @@ public class Student {
 
     @NotNull(message = "Musíte vyplnit pole.")
 //    todo: napsat vlastní message
-    @DateTimeFormat(pattern = "dd.MM.yyyy")
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     @Past(message = "Nemůžete se narodit v budoucnosti.")
     private Date birthday;
 

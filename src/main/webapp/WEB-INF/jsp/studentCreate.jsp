@@ -21,9 +21,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Hello Student</title>
+
+    <%-- pozor nesmím importovat žádnou knihovnu 2x --%>
+    <%-- datepicker --%>
+    <%--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>--%>
+    <script src="../resources/lib/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="../resources/lib/jquery-ui.min.js"></script>
+    <script src="../resources/datePicker.js"></script>
+
+    <%-- validation plugin--%>
+    <%-- toto je knihovna, kde funguje fce .format--%>
+    <script src="../resources/lib/jquery.validate.min.js"></script>
+    <script src="../resources/myValidation.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.datepicker.validation.js"></script>
+    <link rel="stylesheet" href="../resources/css/error.css">
+
+
 </head>
 <body>
-    <form method="post">
+    <form id="form" method="post">
         <div>
             <div>Vyplňte formulář</div>
 
@@ -39,7 +56,7 @@
             </div>
             
             <div>
-                Datum narození:<input name="birthday" placeholder="01.02.1999" value="${formattedDate}">
+                Datum narození:<input name="birthday" placeholder="01.02.1999" id="datepicker" value="${formattedDate}">
                 <spring:errors path="completedForm.birthday"></spring:errors>
             </div>
             <div>Pohlaví:
