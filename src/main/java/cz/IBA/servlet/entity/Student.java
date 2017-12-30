@@ -2,10 +2,16 @@ package cz.IBA.servlet.entity;
 
 import java.util.Date;
 import java.util.UUID;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
 import javax.validation.constraints.Size;
 import org.springframework.format.annotation.DateTimeFormat;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
@@ -18,10 +24,13 @@ import lombok.Data;
  * @author Jana Čižiková
  */
 
-@Data  //POJO objekt
-@Builder
-public class Student {
+//@Builder
 
+@Data  //POJO objekt
+@Entity   //entity bean
+//@Table(name="Student")
+public class Student {
+//    @Column(name="myname")  // můžu zadat na jaký sloupec chci mapovat
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
     private String name;
 
@@ -36,5 +45,8 @@ public class Student {
 
     private Sex sex;
 
+    @Id
+    @GeneratedValue
     private int id;
+
 }

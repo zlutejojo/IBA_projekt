@@ -11,9 +11,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.zaxxer.hikari.HikariDataSource;
-import cz.IBA.servlet.entity.Sex;
-import cz.IBA.servlet.entity.Student;
 import lombok.SneakyThrows;
+
+
+/**
+ *  databáze bez použití hibernate
+ */
 
 @Configuration
 @ComponentScan
@@ -57,20 +60,20 @@ public class DbMain {
         DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
         String dateString = "1999-02-11";
         Date dateObject = sdf.parse(dateString);
+//        s použitím hiberante nemůžu mít builder
+//        Student studentKalina = Student.builder()
+//                .name("Marek")
+//                .surname("Kalina")
+//                .birthday(dateObject)
+//                .sex(Sex.MALE)
+//                .build();
 
-        Student studentKalina = Student.builder()
-                .name("Marek")
-                .surname("Kalina")
-                .birthday(dateObject)
-                .sex(Sex.MALE)
-                .build();
 
-        
-        StudentServiceDbImpl studentServiceDb = applicationContext.getBean(StudentServiceDbImpl.class);
+        StudentServiceDbImplTest studentServiceDb = applicationContext.getBean(StudentServiceDbImplTest.class);
         studentServiceDb.createTable(createTableStudent);
-        studentServiceDb.create(studentKalina);
+//        studentServiceDb.create(studentKalina);
         studentServiceDb.readAll().forEach(System.out::println);
-        
+
 
     }
 
