@@ -11,7 +11,7 @@ Level 11: JUNIT je pro implementaci StudentService s Listem (DB je nefunkční).
 
 
 
-Ne na všechny webou jsou odkazy, aplikace obsahuje tyto URL:
+Ne na všechny weby jsou odkazy, aplikace obsahuje tyto URL:
 
 vypsání Hello: root (bez paramatru)
 
