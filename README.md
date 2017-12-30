@@ -1,6 +1,6 @@
 # IBA_projekt
 
-Level 2: použila jsem maven-archetype-webapp, používám lokálně nainstalovaný tomcat 8.0.47, jednotliví URL viz níže. 
+Level 2: použila jsem maven-archetype-webapp, používám lokálně nainstalovaný tomcat 8.0.47, jednotlivé URL viz níže. 
 
 Level 8: 3. den jsem zkoušela nastavit a použít Hibernate, Hibernate neznám, nedařilo se mi projekt nastavit správně,
 nejdál se mi podařilo dostat s návodem, kde se používá SessionFactory (nevím, ale jestli je to používaný způsob), v projektu jsou jen testovací metody.
