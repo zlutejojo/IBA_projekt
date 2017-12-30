@@ -9,13 +9,20 @@ Level 10: REST je pro implementaci StudentService s Listem (DB je nefunkční), 
 
 Level 11: JUNIT je pro implementaci StudentService s Listem (DB je nefunkční).
 
+
+
 Ne na všechny webou jsou odkazy, aplikace obsahuje tyto URL:
 
 vypsání Hello: root (bez paramatru)
+
 vypsání Hello: root s parametrem: př./?x=4
+
 vytvoření a uložení studenta: /studentCreate 
+
 seznam vytvořených studentů: /studentList (pokud je seznam prázdný, tak se jen zobrazí prázdná stránka)
+
 detail studenta s parametrem (vyžadován): př. /studentDetail?index=0
+
 editace studenta s parametrem (vyžadován): př. /studentEdit?index=0
 
 REST:
