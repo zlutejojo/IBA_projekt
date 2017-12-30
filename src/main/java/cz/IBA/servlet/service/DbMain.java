@@ -57,8 +57,8 @@ public class DbMain {
 
         String createTableStudent = "CREATE TABLE student (id INTEGER IDENTITY PRIMARY KEY, name VARCHAR(60), surname VARCHAR(60), birthday DATE, sex VARCHAR(6))";
 
-        DateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String dateString = "1999-02-11";
+        DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        String dateString = "10/22/1999";
         Date dateObject = sdf.parse(dateString);
 //        s použitím hiberante nemůžu mít builder
 //        Student studentKalina = Student.builder()

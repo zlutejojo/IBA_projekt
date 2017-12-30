@@ -19,7 +19,7 @@ import cz.IBA.servlet.service.StudentServiceListImp;
 
 
 /**
- * controller obsluhe pět webových stránek(výchozí, /studentCreate, /studentDetail, /studentEdit, /studentList)
+ * controller obsluhuje pět webových stránek(výchozí, /studentCreate, /studentDetail, /studentEdit, /studentList)
  * todo dodělat odkazy na všechny webové stránky
  *
  * @author Jana Čižiková
