@@ -17,7 +17,7 @@ vypsání Hello: root (bez paramatru)
 
 vypsání Hello: root s parametrem: př./?x=4
 
-vytvoření a uložení studenta: /studentCreate 
+vytvoření a uložení studenta: /studentCreate (od commitu 93067a6 - Level 7: pridani servisni vrstvy), /student (commit 6a33e59 - Level 5 a commit 6e82c6d - Level 6)) 
 
 seznam vytvořených studentů: /studentList (pokud je seznam prázdný, tak se jen zobrazí prázdná stránka)
 
