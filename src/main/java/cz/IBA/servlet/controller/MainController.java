@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class MainController {
 
+//    ahoj
+
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String printWelcome(ModelMap model, @RequestParam(value = "x", required = false) String xReq) {
 
