@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="jdbc:hsqldb:mem:student" uuid="8f1a5e5b-f1c5-4351-81b7-de348e14b53a">
+      <database-info product="HSQL Database Engine" version="2.3.4" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.4">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>tajne</user-name>
+      <resolve-scope>PUBLIC:public</resolve-scope>
+    </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="723e0b39-bde9-4214-ae34-c63317ffb6c9">
+      <database-info product="HSQL Database Engine" version="2.3.4" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.4">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <auth-required>false</auth-required>
+      <resolve-scope>PUBLIC:public</resolve-scope>
+    </data-source>
+    <data-source name="JPAService/Hibernate" uuid="144c09c5-c0de-4357-9901-83cac222fd51">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
+      <first-sync>true</first-sync>
+      <user-name>ja</user-name>
+    </data-source>
+    <data-source name="META-INF:hibernate.cfg.xml/Hibernate" uuid="cfe13432-cb77-45de-9a3a-355ba1fb156e">
+      <database-info product="HSQL Database Engine" version="2.3.4" jdbc-version="4.0" driver-name="HSQL Database Engine Driver" driver-version="2.3.4">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
+      <auth-required>false</auth-required>
+      <resolve-scope>PUBLIC:public</resolve-scope>
+    </data-source>
+  </component>
+</project>

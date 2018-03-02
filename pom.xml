@@ -7,6 +7,21 @@
   <version>1.0-SNAPSHOT</version>
   <name>helloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
+  <!-- použití javy 8 -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+          <encoding>UTF-8</encoding>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
   
   <dependencies>
     
@@ -16,14 +31,14 @@
       <version>2.5</version>
     </dependency>
 
-    <!-- pouziti knihovny jstl v jsp -->
+    <!-- použití knihovny jstl v jsp -->
     <dependency>
       <groupId>jstl</groupId>
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
 
-    <!-- MVC  -->
+    <!-- vzor MVC  -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
@@ -44,8 +59,70 @@
       <version>6.0.6.Final</version>
     </dependency>
     
+
+    <!-- databáze HSQL -->
+    <dependency>
+      <groupId>org.hsqldb</groupId>
+      <artifactId>hsqldb</artifactId>
+      <version>2.3.5</version>
+    </dependency>
+
+    <!-- připojení k DB (Data Source) -->
+    <dependency>
+      <groupId>com.zaxxer</groupId>
+      <artifactId>HikariCP</artifactId>
+      <version>2.7.4</version>
+    </dependency>
+
+    <!-- práce s DB spring -->
+
+    <dependency>
+      <groupId>org.springframework</groupId>
+      <artifactId>spring-jdbc</artifactId>
+      <version>4.3.11.RELEASE</version>
+    </dependency>
+    
+    <!-- hibernate -->
+
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.12.Final</version>
+    </dependency>
+
+    <!-- rest -->
+    
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-server</artifactId>
+      <version>1.19.4</version>
+    </dependency>
+
+    <dependency>
+      <groupId>com.sun.jersey</groupId>
+      <artifactId>jersey-servlet</artifactId>
+      <version>1.19.4</version>
+    </dependency>
+
+    <!-- jednotkové testy -->
+
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <scope>test</scope>
+    </dependency>
+
+    <dependency>
+      <groupId>org.codehaus.groovy</groupId>
+      <artifactId>groovy-all</artifactId>
+      <version>2.4.13</version>
+    </dependency>
+    
   </dependencies>
-  <build>
-    <finalName>helloWeb</finalName>
-  </build>
+
+  
+  <!--<build>-->
+    <!--<finalName>helloWeb</finalName>-->
+  <!--</build>-->
 </project>
