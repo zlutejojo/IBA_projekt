@@ -51,6 +51,10 @@ public class MainController {
     public ModelAndView displayStudent(){
         ModelAndView modelAndViewStudent = new ModelAndView("student");
 
+//        Student prazdnyFormular = new Student();
+//        modelAndViewStudent.addObject("completedForm", prazdnyFormular);
+
+
         return modelAndViewStudent;
     }
 

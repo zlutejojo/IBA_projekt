@@ -33,7 +33,7 @@
             </div>
             <div>
                 Příjmení:<input name="surname" placeholder="Nováková" value="${completedForm.surname}">
-                <spring:errors path="completedForm.name"></spring:errors>
+                <spring:errors path="completedForm.surname"></spring:errors>
             </div>
             
             <div>

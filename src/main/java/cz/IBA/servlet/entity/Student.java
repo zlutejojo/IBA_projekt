@@ -1,5 +1,6 @@
 package cz.IBA.servlet.entity;
 
+import java.beans.PropertyEditorSupport;
 import java.util.Date;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Past;
@@ -17,7 +18,7 @@ import lombok.Data;
  */
 
 @Data  //POJO objekt
-public class Student {
+public class Student extends PropertyEditorSupport {
 
 
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
