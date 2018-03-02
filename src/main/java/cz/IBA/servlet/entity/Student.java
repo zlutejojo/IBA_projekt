@@ -28,7 +28,7 @@ import lombok.ToString;
 
 //@Builder
 
-@Data  //POJO objekt
+@Data  //POJO objekt  - getter, setter, requiredAllArgCon, eqaul+hashCode, toString
 @Entity   //entity bean
 //@Table(name="Student")
 public class Student {
