@@ -17,6 +17,8 @@ import lombok.Data;
  * @author Jana Čižiková
  */
 
+
+//ahoj
 @Data  //POJO objekt
 public class Student {
 
