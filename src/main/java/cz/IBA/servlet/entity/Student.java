@@ -19,6 +19,7 @@ import lombok.Data;
 
 
 //ahoj
+//    ahoj
 @Data  //POJO objekt
 public class Student {
 

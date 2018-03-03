@@ -113,8 +113,8 @@
       <file leaf-file-name="Student.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/cz/IBA/servlet/entity/Student.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+            <state relative-caret-position="378">
+              <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -1023,12 +1023,12 @@
       <updated>1514363792119</updated>
       <workItem from="1514363794081" duration="30887000" />
       <workItem from="1514449098961" duration="25846000" />
-      <workItem from="1520092282755" duration="18000" />
+      <workItem from="1520092282755" duration="140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56751000" />
+    <option name="totallyTimeSpent" value="56873000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1410,8 +1410,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/cz/IBA/servlet/entity/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
+        <state relative-caret-position="378">
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
           <folding />
         </state>
       </provider>
