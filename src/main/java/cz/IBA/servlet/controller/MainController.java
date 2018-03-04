@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import cz.IBA.servlet.entity.Sex;
-import cz.IBA.servlet.entity.Student;
+import cz.IBA.servlet.entity.StudentPto;
 
 /**
  * controller obsluhe dvě webové stránky: výchozí (index) a student
@@ -51,7 +51,7 @@ public class MainController {
     public ModelAndView displayStudent(){
         ModelAndView modelAndViewStudent = new ModelAndView("student");
 
-//        Student prazdnyFormular = new Student();
+//        StudentPto prazdnyFormular = new StudentPto();
 //        modelAndViewStudent.addObject("completedForm", prazdnyFormular);
 
 
@@ -60,12 +60,12 @@ public class MainController {
 
     /**
      * zpracování formuláře
-     * formulář obsahuje validace (viz třída Student), po zadaní nesprávných údajů,
+     * formulář obsahuje validace (viz třída StudentPto), po zadaní nesprávných údajů,
      * se přezobrazí formulář: zobrazí se komentář chyb/y, vyplněná data zůstanou uložena
      * jestliže jsou pole vyplněna správně, zobrazí se uživateli stránka s výsledkem
      */
     @RequestMapping(value = "/student", method = RequestMethod.POST)
-    public ModelAndView displayStudentResult(@Valid @ModelAttribute("completedForm") Student completedForm, Errors validationErrors) {
+    public ModelAndView displayStudentResult(@Valid @ModelAttribute("completedForm") StudentPto completedForm, Errors validationErrors) {
 
 //        formátování tvaru Date (př. Tue Oct 10 00:00:00 CEST 2017) na tvar vyžadovaný formulářem (př. 10.10.2017)
         Format formatter = new SimpleDateFormat("dd.MM.yyyy");

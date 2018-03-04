@@ -18,7 +18,7 @@ import lombok.Data;
  */
 
 @Data  //POJO objekt
-public class Student extends PropertyEditorSupport {
+public class StudentPto extends PropertyEditorSupport {
 
 
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
