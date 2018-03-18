@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
 import com.zaxxer.hikari.HikariDataSource;
 import cz.IBA.servlet.entity.Sex;
-import cz.IBA.servlet.entity.Student;
+import cz.IBA.servlet.entity.StudentDto;
 import lombok.SneakyThrows;
 
 @Configuration
@@ -58,7 +58,7 @@ public class DbMain {
         String dateString = "1999-02-11";
         Date dateObject = sdf.parse(dateString);
 
-        Student studentKalina = Student.builder()
+        StudentDto studentKalina = StudentDto.builder()
                 .name("Marek")
                 .surname("Kalina")
                 .birthday(dateObject)

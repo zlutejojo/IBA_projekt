@@ -1,15 +1,15 @@
 package cz.IBA.servlet.service;
 
 import java.util.List;
-import cz.IBA.servlet.entity.Student;
+import cz.IBA.servlet.entity.StudentDto;
 
 public interface StudentService {
 
 //    todo dodelat komentare
 
-    void create(Student newStudent);
-    List<Student> readAll();
+    void create(StudentDto newStudent);
+    List<StudentDto> readAll();
 //    Student read(int indexStudent);
-    void update(int indexStudent, Student updatedStudent);
+    void update(int indexStudent, StudentDto updatedStudent);
     void delete(int indexStudent);
 }

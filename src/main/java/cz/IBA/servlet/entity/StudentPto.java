@@ -20,7 +20,7 @@ import lombok.Data;
 
 @Data  //POJO objekt
 @Builder
-public class Student {
+public class StudentPto {
 
     @Size(min = 1, max = 60, message = "Musíte zadat 1 až 60 znaků.")
     private String name;

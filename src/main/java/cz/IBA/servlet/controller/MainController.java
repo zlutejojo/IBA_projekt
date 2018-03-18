@@ -3,6 +3,7 @@ package cz.IBA.servlet.controller;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.Errors;
@@ -13,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import cz.IBA.servlet.entity.Sex;
-import cz.IBA.servlet.entity.Student;
+import cz.IBA.servlet.entity.StudentPto;
 import cz.IBA.servlet.service.StudentServiceListImp;
 
 
@@ -27,7 +28,9 @@ import cz.IBA.servlet.service.StudentServiceListImp;
 @Controller
 public class MainController {
 
-    StudentServiceListImp studentService = new StudentServiceListImp();
+//    StudentServiceListImp studentService = new StudentServiceListImp();
+    @Autowired
+    StudentServiceListImp studentService;
 
     /**
      * parametr x určuje kolikrát se vypíše uvítací text,
@@ -70,7 +73,7 @@ public class MainController {
 //    mapping pro studentCreate nebo studentEdit
     @RequestMapping(value = {"/{path:student(?:Create|Edit){1}}"}, method = RequestMethod.POST)
     public ModelAndView displayStudentResult(@RequestParam(value = "index", required = false) Integer index,
-                                             @Valid @ModelAttribute("completedForm") Student completedForm,
+                                             @Valid @ModelAttribute("completedForm") StudentPto completedForm,
                                              Errors validationErrors,
                                              @PathVariable String path) {
 

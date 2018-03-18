@@ -9,7 +9,7 @@ import org.springframework.dao.OptimisticLockingFailureException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Service;
 import cz.IBA.servlet.entity.Sex;
-import cz.IBA.servlet.entity.Student;
+import cz.IBA.servlet.entity.StudentDto;
 
 @Service
 public class StudentServiceDbImpl implements StudentService{
@@ -22,7 +22,7 @@ public class StudentServiceDbImpl implements StudentService{
      * vloží záznam nového studenta do databáze
      */
     @Override
-    public void create(Student newStudent) {
+    public void create(StudentDto newStudent) {
         jdbcTemplate.update("INSERT INTO student (name, surname, birthday, sex) VALUES(?, ?, ?, ?)",
                 newStudent.getName(),
                 newStudent.getSurname(),
@@ -35,10 +35,10 @@ public class StudentServiceDbImpl implements StudentService{
      * vrátí všechny studenty z databáze
      */
     @Override
-    public List<Student> readAll() {
+    public List<StudentDto> readAll() {
         return jdbcTemplate.query(
                 "SELECT name, surname, birthday, sex, id FROM student",
-                (rs,i) -> Student.builder()
+                (rs,i) -> StudentDto.builder()
                         .name(rs.getString("name"))
                         .surname(rs.getString("surname"))
                         .birthday(rs.getDate("birthday"))
@@ -55,7 +55,7 @@ public class StudentServiceDbImpl implements StudentService{
 
 //    netestováno
     @Override
-    public void update(int idStudent, Student updatedStudent) {
+    public void update(int idStudent, StudentDto updatedStudent) {
         int numberChangedRow = jdbcTemplate.update("UPDATE student SET name = ?, surname = ?, birthday = ?, sex = ? WHERE id = ?",
                 updatedStudent.getName(),
                 updatedStudent.getSurname(),

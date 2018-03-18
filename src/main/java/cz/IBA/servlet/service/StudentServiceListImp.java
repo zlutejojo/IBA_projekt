@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
-import cz.IBA.servlet.entity.Student;
+import org.springframework.stereotype.Service;
+import cz.IBA.servlet.entity.StudentDto;
 
+@Service
 public class StudentServiceListImp implements StudentService {
 
     //    todo dodělat komentáře
@@ -15,16 +17,16 @@ public class StudentServiceListImp implements StudentService {
     /**
      * seznam všech studentů přidaných na webu /student
      */
-    private List<Student> studentList = new ArrayList<>();
+    private List<StudentDto> studentList = new ArrayList<>();
 
 
     @Override
-    public void create(Student newStudent) {
+    public void create(StudentDto newStudent) {
         studentList.add(newStudent);
     }
 
     @Override
-    public List<Student> readAll() {
+    public List<StudentDto> readAll() {
         return Collections.unmodifiableList(studentList);
     }
 
@@ -43,7 +45,7 @@ public class StudentServiceListImp implements StudentService {
 //    }
 
     @Override
-    public void update(int indexStudent, Student updatedStudent) {
+    public void update(int indexStudent, StudentDto updatedStudent) {
         studentList.set(indexStudent, updatedStudent);
     }
 
