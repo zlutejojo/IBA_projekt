@@ -8,7 +8,7 @@
   <name>helloWeb Maven Webapp</name>
   <url>http://maven.apache.org</url>
 
-  <!-- použití javy 8 -->
+  <!-- použití javy 8 a kodování UTF-8 -->
   <build>
     <plugins>
       <plugin>

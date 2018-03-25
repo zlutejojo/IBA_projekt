@@ -9,6 +9,7 @@ import cz.IBA.servlet.entity.Student;
 /**
  * rest pro StudentListImpl
  * po zadání URL http://localhost:port/rest/Student/index, kde index je index studenta v seznamu, se vypíšou informace o studentovi
+ * toto @Path("/Student") je relativní k servletu, mapovani servletu mam v tomto pripade nastaveny ve web.xml
  */
 
 @Path("/Student")
